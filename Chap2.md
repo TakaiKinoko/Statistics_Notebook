@@ -15,3 +15,5 @@
         * **real nums** e.g. physical measurements
 
 ## 2. Scales of measurement
+* meaning: different values of the variable can relate to each other in different ways
+* 
