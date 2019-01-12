@@ -124,7 +124,7 @@ class Respondents(Table):
                 cast is a callable that converts the result to int, float, etc.
         """
         return [
-            ('caseid', 1, 12, int),
+            ('caseid', 1, 12, int),     # int is a conversion function!
             ]
 
 class Pregnancies(Table):
@@ -187,11 +187,11 @@ class Pregnancies(Table):
 def main(name, data_dir='.'):
     resp = Respondents()
     resp.ReadRecords(data_dir)
-    print 'Number of respondents', len(resp.records)
+    print('Number of respondents', len(resp.records))
 
     preg = Pregnancies()
     preg.ReadRecords(data_dir)
-    print 'Number of pregnancies', len(preg.records)
+    print('Number of pregnancies', len(preg.records))
 
     
 if __name__ == '__main__':
