@@ -28,3 +28,10 @@
 * **record**: information about one respondent
 * **fields**: variables that make up a record
 * **table**: a collection of records
+
+
+## statistical significance
+Even when an **apparent effect** is derived from some data, there's still no guarantee that the effect is statistically significant.
+    * need to see other **summary statistics**, e.g. with a difference in  means, what about median and variance
+    * is it possible that the difference occurred by chance?
+    * Is it possible that the apparent effect is due to selection bias or some other error in the experimental setup? If so, then we might conclude that the effect is an **artifact**; that is, something we created (by accident) rather than found.
