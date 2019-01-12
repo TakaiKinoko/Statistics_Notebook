@@ -17,3 +17,20 @@ If there is **no single number** that summarizes pumpkin weights, we can do a li
 
 ### Distributions -- an alternative to summary stats
 Summary statistics are concise, but dangerous,because they obscure the data. An alternative is to look at the distribution of the data, which describes how often each value appears.
+
+* a common representation: **histogram**, a graph that shows the frequency **or** probability of each value
+    * frequency --  the number of times a value appears in a dataset
+    * probability -- frequency expressed as a fraction of the sample size n
+
+* Python 
+an efficient way to compute frequencies is with a dictionary
+```
+# given a sequence of values t
+hist = {}
+for x in t: 
+    hist[x] = hist.get(x, 0) + 1    #get(key[, default])
+Return the value for key if key is in the dictionary, else default.
+# The result is a dictionary that maps from values to frequencies
+```
+
+
