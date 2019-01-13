@@ -23,14 +23,21 @@ Summary statistics are concise, but dangerous,because they obscure the data. An 
     * probability -- frequency expressed as a fraction of the sample size n
 
 * Python 
-an efficient way to compute frequencies is with a dictionary
-```
-# given a sequence of values t
-hist = {}
-for x in t: 
-    hist[x] = hist.get(x, 0) + 1    #get(key[, default])
-Return the value for key if key is in the dictionary, else default.
-# The result is a dictionary that maps from values to frequencies
-```
+    * an efficient way to compute frequencies is with a dictionary
+    ```
+    # given a sequence of values t
+    hist = {}
+    for x in t: 
+    hist[x] = hist.get(x, 0) + 1   #get(key[, default]) return the value for key if key is in the dictionary, else default.
+    # The result is a dictionary that maps from values to frequencies
+    ```
 
+    * To get from frequencies to probabilities, we divide through by n, which is called **normalization**:
+    ```
+    n = float(len(t))
+    pmf = {}
+    for x, freq in hist.items(): # items() returns a new view of the dictionary’s items ((key, value) pairs)
+        pmf[x] = freq / n
+    ```
+    The normalized histogram is called a **PMF**, which stands for “probability mass function”; that is, it’s a function that maps from values to probabilities
 
